@@ -1,0 +1,72 @@
+# General
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# System files
+*.bak
+*.orig
+*.old
+
+# macOS specific
+.AppleDouble
+.LSOverride
+Icon?
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Java
+*.class
+
+# JavaScript/TypeScript
+/dist/
+/out/
+
+# PHP
+/vendor/
+
+# Ruby
+.bundle/
+/log/
+/tmp/
+*.gem
+
+/.idea/
+/.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Go
+*.exe
+*.test
+*.out
+
+# Rust
+/target/
+
+# Swift
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+
+# Other
+*.env
+*.env.local
+
