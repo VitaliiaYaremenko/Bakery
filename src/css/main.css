@@ -1,0 +1,74 @@
+/* BASIC STYLE*/
+
+:root {
+    --color-primary-dark: #31261A;
+    --color-primary-light: #FAF4EA;
+    --color-brand-dark: #465929 ;
+    --color-brand-light: #819B57;
+    --color-backgraung: #E4E4E4;
+}
+
+body {
+    background-color: var(--color-backgraung);
+    color: var(--color-primary-dark);
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 16px 32px;
+    color: var(--color-primary-light);
+    background-color: var(--color-brand-light);
+    border-radius: 8px;
+    border: 2px solid var(--color-brand-light);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--color-brand-dark);
+}
+
+.accent {
+    color: var(--color-brand-light);
+}
+.accent-dark {
+    color: var(--color-brand-dark);
+}
+
+/* HEADER */
+.nav__link {
+    color: var(--color-primary-light);
+}
+
+.nav__link:hover {
+    color: var(--color-brand-light);
+}
+
+/* BAKERY SECTION */
+
+/* ADVANTAGES SECTION */
+
+.advantages {
+    background-color: var(--color-brand-light);
+}
+.advantages__list {
+    color: var(--color-primary-light);
+}
+
+
+/* FORMAT */
+
+.format__list {
+    color: var(--color-primary-light);
+}
+
+/* FOOTER */
+
+.footer__contact-link,
+.footer__privacy-policy {
+    color: var(--color-primary-light);
+}
