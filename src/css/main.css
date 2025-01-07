@@ -32,8 +32,8 @@
     --color-brand-dark: #465929 ;
     --color-brand-light: #819B57;
     --color-backgraung: #E4E4E4;
+    --color-copyright: #A18268;
 }
-
 body {
     background-color: var(--color-backgraung);
     color: var(--color-primary-dark);
@@ -42,13 +42,13 @@ body {
     font-size: 18px;
     line-height: 1.5;
 }
-
 .container {
     max-width: 1250px;
     margin: 0 auto;
 }
-
 .btn {
+    font-weight: 600;
+    font-size: 18px;
     padding: 16px 32px;
     color: var(--color-primary-light);
     background-color: var(--color-brand-light);
@@ -56,44 +56,70 @@ body {
     border: 2px solid var(--color-brand-light);
     cursor: pointer;
 }
-
 .btn:hover {
     background-color: transparent;
     color: var(--color-brand-dark);
 }
-
 .accent {
     color: var(--color-brand-light);
 }
 .accent-dark {
     color: var(--color-brand-dark);
 }
+.section__title {
+    font-weight: 900;
+    font-size: 64px;
+}
+.uppercase {
+    text-transform: uppercase;
+}
 
 /* HEADER */
 .nav__link {
     color: var(--color-primary-light);
 }
-
 .nav__link:hover {
     color: var(--color-brand-light);
+    font-weight: 600;
 }
 
 /* BAKERY SECTION */
+.hero__title {
+    font-weight: 900;
+    font-size: 128px;
+    text-align: center;
+    color: var(--color-primary-light);
+}
 
 /* ADVANTAGES SECTION */
-
 .advantages {
     background-color: var(--color-brand-light);
 }
 .advantages__list {
     color: var(--color-primary-light);
+    font-weight: 300;
+    font-size: 20px;
 }
 
+/* TRADITIONS SECTION */
+
+/* CHEFS SECTION */
+.card__title {
+    font-weight: 600;
+    font-size: 40px;
+}
 
 /* FORMAT */
-
 .format__list {
     color: var(--color-primary-light);
+}
+.format__title {
+    font-weight: 600;
+    font-size: 24px;
+}
+.format__desc {
+    font-weight: 300;
+    font-size: 14px;
 }
 
 /* FOOTER */
@@ -101,4 +127,10 @@ body {
 .footer__contact-link,
 .footer__privacy-policy {
     color: var(--color-primary-light);
+    font-weight: 300;
+    font-size: 16px;
+}
+.footer__copyright {
+    color: var(--color-copyright);
+    font-size: 14px;
 }
