@@ -43,8 +43,21 @@ body {
     line-height: 1.5;
 }
 .container {
-    max-width: 1250px;
+    max-width: 1288px;
+    width: 100%;
+    padding: 0 24px;
     margin: 0 auto;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 .btn {
     font-weight: 600;
@@ -60,21 +73,6 @@ body {
     background-color: transparent;
     color: var(--color-brand-dark);
 }
-.accent {
-    color: var(--color-brand-light);
-}
-.accent-dark {
-    color: var(--color-brand-dark);
-}
-.section__title {
-    font-weight: 900;
-    font-size: 64px;
-}
-.uppercase {
-    text-transform: uppercase;
-}
-
-/* HEADER */
 .nav__link {
     color: var(--color-primary-light);
 }
@@ -82,11 +80,51 @@ body {
     color: var(--color-brand-light);
     font-weight: 600;
 }
+.section {
+    padding: 48px 0;
+}
+.section__title {
+    font-weight: 900;
+    font-size: 64px;
+}
+.accent {
+    color: var(--color-brand-light);
+}
+.accent-dark {
+    color: var(--color-brand-dark);
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* HEADER */
+.header {
+    padding-top: 32px;
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.header__nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 40px
+}
+.header__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 64px;
+}
 
 /* BAKERY SECTION */
 .hero__title {
     font-weight: 900;
     font-size: 128px;
+    padding: 272px 0;
     text-align: center;
     color: var(--color-primary-light);
 }
@@ -94,34 +132,88 @@ body {
 /* ADVANTAGES SECTION */
 .advantages {
     background-color: var(--color-brand-light);
+    padding: 16px 0;
 }
 .advantages__list {
     color: var(--color-primary-light);
     font-weight: 300;
     font-size: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* TRADITIONS SECTION */
-
+.tradition {
+    padding-top: 96px;
+}
+.tradition__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.tradition__content {
+    max-width: 680px;
+}
+.tradition__title {
+    margin-bottom: 42px;
+}
+.tradition__desc {
+    margin-bottom: 42px;
+}
+.tradition__desc.limited {
+    max-width: 340px;
+    margin-bottom: 0;
+}
 /* CHEFS SECTION */
-.card__title {
+.chefs__title {
+    margin-bottom: 80px;
+    max-width: 535px;
+    text-align: center;
+}
+.chefs__list {
+    display: flex;
+    justify-content: space-between;
+}
+.chef__card {
+    display: flex;
+    gap: 30px;
+}
+.chef__title {
     font-weight: 600;
     font-size: 40px;
+    margin-bottom: 16px;
+}
+.chef__about {
+    max-width: 334px;
+}
+.chef__desc {
+    margin-bottom: 20px;
+}
+.chef__desc:last-child {
+    margin-bottom: 0;
 }
 
 /* FORMAT */
+.formats__title {
+    margin-bottom: 80px;
+}
 .format__list {
     color: var(--color-primary-light);
 }
 .format__title {
     font-weight: 600;
     font-size: 24px;
+    margin-bottom: 16px;
 }
 .format__desc {
     font-weight: 300;
     font-size: 14px;
 }
 
+/* FORMAT SECTION*/
+.contact__title {
+    margin-bottom: 16px;
+}
 /* FOOTER */
 
 .footer__contact-link,
