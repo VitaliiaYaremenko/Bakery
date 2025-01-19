@@ -30,12 +30,13 @@
     --color-primary-dark: #31261A;
     --color-primary-light: #FAF4EA;
     --color-brand-dark: #465929 ;
-    --color-brand-light: #819B57;
-    --color-backgraung: #E4E4E4;
+    --color-brand-normal: #819B57;
+    --color-brand-light: #CFCFBC;
+    --color-secondary-dark: #A18268;
     --color-copyright: #A18268;
 }
 body {
-    background-color: var(--color-backgraung);
+    background-color: var(--color-primary-light);
     color: var(--color-primary-dark);
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -64,9 +65,9 @@ body {
     font-size: 18px;
     padding: 16px 32px;
     color: var(--color-primary-light);
-    background-color: var(--color-brand-light);
+    background-color: var(--color-brand-normal);
     border-radius: 8px;
-    border: 2px solid var(--color-brand-light);
+    border: 2px solid var(--color-brand-normal);
     cursor: pointer;
 }
 .btn:hover {
@@ -77,7 +78,7 @@ body {
     color: var(--color-primary-light);
 }
 .nav__link:hover {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
     font-weight: 600;
 }
 .section {
@@ -88,7 +89,7 @@ body {
     font-size: 64px;
 }
 .accent {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
 }
 .accent-dark {
     color: var(--color-brand-dark);
@@ -121,6 +122,12 @@ body {
 }
 
 /* BAKERY SECTION */
+.bakery {
+    background-image: url("../images/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
 .hero__title {
     font-weight: 900;
     font-size: 128px;
@@ -131,7 +138,7 @@ body {
 
 /* ADVANTAGES SECTION */
 .advantages {
-    background-color: var(--color-brand-light);
+    background-color: var(--color-brand-normal);
     padding: 16px 0;
 }
 .advantages__list {
@@ -166,9 +173,16 @@ body {
 }
 /* CHEFS SECTION */
 .chefs__title {
-    margin-bottom: 80px;
+    margin: 0 auto 80px;
     max-width: 535px;
     text-align: center;
+}
+.chefs__title::before,
+.chefs__title::after {
+    content: '';
+    display: block;
+    width: 352px;
+    border: 2px solid var(--color-brand-light);
 }
 .chefs__list {
     display: flex;
@@ -177,6 +191,10 @@ body {
 .chef__card {
     display: flex;
     gap: 30px;
+}
+.chef__img {
+    border-radius: 4px 4px 4px 200px;
+    box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
 .chef__title {
     font-weight: 600;
@@ -196,9 +214,21 @@ body {
 /* FORMAT */
 .formats__title {
     margin-bottom: 80px;
+    text-align: center;
 }
 .format__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     color: var(--color-primary-light);
+}
+.format__item {
+    flex-basis: calc((100% - 40px) / 3);
+}
+.format__card {
+    padding: 24px;
+    height: 444px;
+    background: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, #31261a 100%);
 }
 .format__title {
     font-weight: 600;
@@ -215,6 +245,13 @@ body {
     margin-bottom: 16px;
 }
 /* FOOTER */
+.footer {
+    background-color: var(--color-primary-dark);
+    background-image: url("../images/footer-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 .footer__contact-link,
 .footer__privacy-policy {
