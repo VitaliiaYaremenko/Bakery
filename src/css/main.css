@@ -216,6 +216,22 @@ body {
     margin-bottom: 80px;
     text-align: center;
 }
+.button__carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid var(--color-primary-dark);
+    fill: var(--color-primary-dark);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+}
+.button__carousel:hover {
+    background-color: var(--color-primary-dark);
+    fill: var(--color-primary-light);
+}
 .format__list {
     display: flex;
     flex-wrap: wrap;
@@ -240,7 +256,7 @@ body {
     font-size: 14px;
 }
 
-/* FORMAT SECTION*/
+/* CONTACT SECTION*/
 .contact__title {
     margin-bottom: 16px;
 }
@@ -253,6 +269,12 @@ body {
     background-size: cover;
 }
 
+.footer__social-icon {
+    fill: var(--color-primary-light);
+}
+.footer__social-icon:hover {
+    fill: var(--color-brand-normal);
+}
 .footer__contact-link,
 .footer__privacy-policy {
     color: var(--color-primary-light);
