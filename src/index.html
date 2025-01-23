@@ -36,7 +36,7 @@
               </li>
             </ul>
           </nav>
-          <button class="btn" type="button">Замовити дзвінок</button>
+          <button class="btn modal__btn-open" type="button">Замовити дзвінок</button>
         </div>
       </div>
     </header>
@@ -88,7 +88,10 @@
       <section id="chefs-section" class="chefs section">
         <div class="container">
           <div class="chefs__container">
-            <h2 class="section__title chefs__title">Наші найкращі <span class="accent-dark">шеф -кухарі</span></h2>
+            <h2 class="section__title chefs__title">
+              Наші найкращі <br />
+              <span class="accent-dark">шеф -кухарі</span>
+            </h2>
             <ul class="chefs__list">
               <li class="chefs__item">
                 <article class="chef__card">
@@ -274,6 +277,12 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop">
+      <div class="modal">
+        <button type="button" class="modal__btn-close">X</button>
+      </div>
+    </div>
     <script src="scripts/script.js"></script>
   </body>
 </html>
