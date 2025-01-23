@@ -34,6 +34,7 @@
     --color-brand-light: #CFCFBC;
     --color-secondary-dark: #A18268;
     --color-copyright: #A18268;
+    --hero-bg: linear-gradient(127deg, rgba(18, 18, 17, 0.78) 0%, rgba(18, 18, 17, 0.6) 63.89%, rgba(18, 18, 17, 0) 100%)
 }
 body {
     background-color: var(--color-primary-light);
@@ -81,6 +82,9 @@ body {
     color: var(--color-brand-normal);
     font-weight: 600;
 }
+a {
+    display: inline-block;
+}
 .section {
     padding: 48px 0;
 }
@@ -123,7 +127,7 @@ body {
 
 /* BAKERY SECTION */
 .bakery {
-    background-image: url("../images/hero-bg.jpg");
+    background-image: url("../images/hero-bg.png");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -174,23 +178,32 @@ body {
 /* CHEFS SECTION */
 .chefs__title {
     margin: 0 auto 80px;
-    max-width: 535px;
     text-align: center;
+    position: relative;
 }
 .chefs__title::before,
 .chefs__title::after {
     content: '';
-    display: block;
-    width: 352px;
+    position: absolute;
+    width: 360px;
     border: 2px solid var(--color-brand-light);
+}
+.chefs__title::before {
+    left: 0;
+    bottom: 24px;
+}
+.chefs__title::after {
+    right: 0;
+    bottom: 24px;
 }
 .chefs__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .chef__card {
     display: flex;
-    gap: 30px;
+    gap: 40px 30px;
 }
 .chef__img {
     border-radius: 4px 4px 4px 200px;
@@ -216,6 +229,11 @@ body {
     margin-bottom: 80px;
     text-align: center;
 }
+.format__container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
 .button__carousel {
     display: flex;
     align-items: center;
@@ -224,6 +242,7 @@ body {
     border: 1px solid var(--color-primary-dark);
     fill: var(--color-primary-dark);
     border-radius: 50%;
+    flex-shrink: 0;
     width: 44px;
     height: 44px;
     cursor: pointer;
@@ -257,8 +276,20 @@ body {
 }
 
 /* CONTACT SECTION*/
+.contact {
+    padding-bottom: 96px;
+}
+.contact__container {
+    display: flex;
+    gap: 32px;
+}
 .contact__title {
     margin-bottom: 16px;
+    font-size: 60px;
+}
+.contact__map {
+    flex-shrink: 0;
+    border-radius: 16px;
 }
 /* FOOTER */
 .footer {
@@ -267,6 +298,46 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding: 32px 0;
+    position: relative;
+}
+.footer::before,
+.footer::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    bottom: 0;
+}
+.footer::before {
+    background-image: url("../images/footer-bread-left.png");
+    width: 180px;
+    height: 120px;
+    left: 0;
+}
+.footer::after{
+    background-image: url("../images/footer-bread-right.png");
+    width: 380px;
+    height: 190px;
+    right: 0;
+}
+.footer__container {
+    display: flex;
+    gap: 20px;
+}
+.footer__nav,
+.footer__address {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+}
+.footer__logo,
+.footer__menu {
+    flex-grow: 1;
+}
+
+.footer__contact-list,
+.footer__policy {
+    flex-grow: 1;
 }
 
 .footer__social-icon {
@@ -284,4 +355,38 @@ body {
 .footer__copyright {
     color: var(--color-copyright);
     font-size: 14px;
+}
+
+
+/* MODAL*/
+.backdrop {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    width: 880px;
+    height: 880px;
+    background-color: var(--color-primary-light);
+    border-radius: 32px;
+    position: relative;
+}
+
+.modal__btn-close {
+    position: absolute;
+    top: 48px;
+    right: 48px;
 }
